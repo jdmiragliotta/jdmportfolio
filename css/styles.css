@@ -133,7 +133,7 @@ Notes:	 Hand coded for jmigsdesign.com
   	color:#fff;
    }
 
-   .navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+   .navbar-custom .navbar-nav > li > a:hover{
     text-decoration: none;
     color: #959595;
 	}
@@ -194,6 +194,7 @@ Notes:	 Hand coded for jmigsdesign.com
 		padding-right: 43px;
 		margin: 1px;
 	}
+
 	
 	
 	
@@ -326,7 +327,7 @@ Notes:	 Hand coded for jmigsdesign.com
 		border-color: #fff;
 	}
 	
-	.btn-feature:hover, .btn-feature:focus, .btn-feature:active, .btn-feature.active {
+	.btn-feature:hover, .btn-feature:active, .btn-feature.active {
 		color: #fff;
 		background-color: #a90003;
 		border-color: #FFF;
