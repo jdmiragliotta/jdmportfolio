@@ -265,6 +265,10 @@ Notes:	 Hand coded for jmigsdesign.com
 	#myHeader .item {
 		height: 185px;
 	}
+
+	#github {
+		background: url('../images/github_header_medium.png') top center no-repeat;
+	}
 	
 	#blog {
 		background: url('../images/blog_header_medium.png') top center no-repeat;
@@ -453,6 +457,10 @@ Notes:	 Hand coded for jmigsdesign.com
 		height: 140px;	
 	}
 
+	#github {
+		background: url('../images/github_header_xsmall.png') top center no-repeat;
+	}
+
 	#blog {
 		background: url('../images/blog_header_xsmall.png') top center no-repeat;
 	}
@@ -524,6 +532,10 @@ Notes:	 Hand coded for jmigsdesign.com
 	#myHeader .item {
 		height: 143px;	
 	}
+
+	#github {
+		background: url('../images/github_header_small.png') top center no-repeat;
+	}
 		
 	#blog {
 		background: url('../images/blog_header_small.png') top center no-repeat;
@@ -581,6 +593,10 @@ Notes:	 Hand coded for jmigsdesign.com
 	
 	#myheader .item {
 		height: 185px;
+	}
+
+	#github {
+		background: url('../images/github_header_medium.png') top center no-repeat;
 	}
 	
 	#blog {
@@ -641,6 +657,10 @@ Notes:	 Hand coded for jmigsdesign.com
 	/* ----- Headers----- */
 	#myHeader .item {
 		height: 230px;	
+	}
+
+	#github {
+		background: url('../images/github_header_large.png') top center no-repeat;
 	}
 	
 	#blog {
