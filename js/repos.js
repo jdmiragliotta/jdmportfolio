@@ -1,4 +1,4 @@
-$(document).ready(fucntion(){
+$(document).ready(function(){
   $.ajax({
     type: "GET",
     url: "http://api.github.com/users/jdmiragliotta/repos",
@@ -16,12 +16,12 @@ $(document).ready(fucntion(){
   function buildListGroup(repoData){
     var commitsApiUrl = "https://api.github.com/repos/";
     commitsApiUrl += repoData.owner.login + "/";
-    commitApiUrl += repoData.name + "/commits";
+    commitsApiUrl += repoData.name + "/commits";
 
-    varnewLink =$("<a>")
+    var newLink =$("<a>")
       .attr("href", commitsApiUrl)
-      .addClass("list-group-item")
-      append.(repoData.full_name);
+      .addClass("list-group-item lgi-link")
+      .append(repoData.full_name);
     return newLink;
   }
 });

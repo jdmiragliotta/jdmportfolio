@@ -410,9 +410,37 @@ Notes:	 Hand coded for jmigsdesign.com
   	padding: 0 15px;
    }
    
-   
-   
-   
+ /* --------------------------------------
+   Repo Styles
+   -------------------------------------- */
+   .repo-header{
+   	color:#fff;
+   }
+
+   .repo-body{
+   	color:#fff;
+   }
+
+   .custom-table{
+   	width: 100%;
+   }
+
+   .list-group-item:nth-child(even){
+   		background-color: #323232;
+   	}
+
+   	.list-group-item:nth-child(odd){
+   		background-color: #282828;
+   	}
+
+   	.lgi-link{
+   		color: #fff;
+   		border: none;
+   	}
+
+   	.list-group{
+   		background-color: #323232;
+   	}
    
 /* --------------------------------------
    Media Queries

@@ -177,16 +177,31 @@
 		
 		
 		<hr class="hidden-sm">
-
-		<div class="row">
-			<div class="col-md-5">
-			<div class="list-group">
-			</div>
-			<div class="col-md-7">
-				<div class="table">
+		
+		<div class="col-sm-5">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				My Repositories
+				</div>
+				<div class="panel-body">
+					<div class="list-group">
+					</div>
 				</div>
 			</div>
+		</div>	
+		<div class="col-sm-7">
+			<table class="table custom-table">
+				<thead class="repo-header">
+					<th>sha</th>
+					<th>Author</th>
+					<th>Message</th>
+					<th>Date</th>
+				</thead>
+				<tbody class="repo-body">
+				</tbody>
+			</table>
 		</div>
+
 
 		<div class="row" id="bigCallout">
 				<div class="col-sm-12">
@@ -260,8 +275,9 @@
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	
 	<!-- Custom JS -->
-	<script src="js/script.js"></script>
-		
+	<script src="js/repos.js"></script>
+	<script src="js/commits.js"></script>
+	
 	</body>
 </html>
 
