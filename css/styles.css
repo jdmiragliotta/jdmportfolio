@@ -441,6 +441,10 @@ Notes:	 Hand coded for jmigsdesign.com
    	.list-group{
    		background-color: #323232;
    	}
+
+   	.sha{
+   		color:#fff;
+   	}
    
 /* --------------------------------------
    Media Queries
