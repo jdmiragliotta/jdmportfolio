@@ -442,9 +442,11 @@ Notes:	 Hand coded for jmigsdesign.com
    		background-color: #323232;
    	}
 
-   	.sha{
+   	.sha, .sha:hover{
    		color:#fff;
    	}
+
+
    
 /* --------------------------------------
    Media Queries

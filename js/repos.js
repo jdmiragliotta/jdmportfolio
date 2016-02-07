@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.ajax({
     type: "GET",
-    url: "http://api.github.com/users/jdmiragliotta/repos",
+    url: "https://api.github.com/users/jdmiragliotta/repos",
     success: function(repos){
       for(var i =0; i < repos.length; i++){
         var newListItem = buildListGroup(repos[i]);
