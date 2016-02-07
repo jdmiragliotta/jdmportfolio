@@ -12,6 +12,10 @@ app.get("/", function(req, res){
   res.sendFile(process.cwd() + "/views/index.html");
 });
 
+app.get("/index", function(req, res){
+  res.sendFile(process.cwd() + "/views/index.html");
+});
+
 app.get("/webdev", function(req, res){
   res.sendFile(process.cwd() + "/views/webdev.html");
 });

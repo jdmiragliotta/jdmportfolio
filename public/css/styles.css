@@ -363,7 +363,17 @@ Notes:	 Hand coded for jmigsdesign.com
 	}
 	
 	
-	
+/*  --------------------------------------
+ Web Dev Styles
+ -------------------------------------- */
+	#db-well {
+		margin-top: 0;
+	}
+
+	.dev-ul{
+		list-style: none;
+		padding-left: 0;
+	}
 	
 			
 /*  --------------------------------------
