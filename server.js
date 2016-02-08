@@ -9,12 +9,35 @@ var github = new githubApi({
 var PORT = process.env.PORT || 8000;
 var email = "a@a.com";
 var password = "password"; 
+
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use("/js", express.static("public/js"));
 app.use("/css", express.static("public/css"));
 app.use("/fancybox", express.static("public/fancybox"));
 app.use("/images", express.static("public/images"));
 app.use("/gallery", express.static("public/images/gallery"));
+app.use(session({
+ secret: 'crazy secret boom!!',
+ cookie: {
+     maxAge: 10000
+   },
+ saveUninitialized:true,
+ resave: false
+ }
+));
+
+function middleware(req,res,next){
+ var sess = req.session;
+
+ if(sess.authenticated === undefined || sess.authenticated === false){
+   res.redirect("/login");
+ }
+ next();
+
+}
+
+// Routing for Pages ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 app.get("/", function(req, res){
   res.sendFile(process.cwd() + "/views/index.html");
@@ -44,7 +67,7 @@ app.get("/clients", function(req, res){
   res.sendFile(process.cwd() + "/views/clients.html");
 });
 
-app.get("/blog", function(req, res){
+app.get("/blog", middleware, function(req, res){
   res.sendFile(process.cwd() + "/views/blog.html");
 });
 
@@ -56,7 +79,7 @@ app.get("/github", function(req, res){
   res.sendFile(process.cwd() + "/views/github.html");
 });
 
-// Get GitHub infomation
+// Get GitHub Information ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~s
 
 app.get('/webdev/:githubUser', function(req, res){
   var github = new githubApi({
@@ -69,10 +92,13 @@ app.get('/webdev/:githubUser', function(req, res){
     });
  });
 
+// Logs User Into Blog Page
 app.post("/login", function(req,res){
   if(req.body.email === email && req.body.password === password){
-     res.redirect("/blog");
+    req.session.authenticated = true;
+    res.redirect("/blog");
   } else {
+    req.session.authenticated = false;
     res.redirect("/login");
   }
 })
