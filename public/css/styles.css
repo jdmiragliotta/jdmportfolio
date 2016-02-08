@@ -362,20 +362,7 @@ Notes:	 Hand coded for jmigsdesign.com
 		max-width: 100%;
 	}
 	
-	
-/*  --------------------------------------
- Web Dev Styles
- -------------------------------------- */
-	#db-well {
-		margin-top: 0;
-	}
-
-	.dev-ul{
-		list-style: none;
-		padding-left: 0;
-	}
-	
-			
+				
 /*  --------------------------------------
    Global Styles
    -------------------------------------- */
@@ -394,7 +381,17 @@ Notes:	 Hand coded for jmigsdesign.com
 		margin: 0;
 	}
 	
-	
+/*  --------------------------------------
+ Web Dev Styles
+ -------------------------------------- */
+	#db-well {
+		margin-top: 0px;
+	}
+
+	.dev-ul, .webdev-ul{
+		list-style: none;
+		padding-left: 0;
+	}
 	
 	
 		

@@ -1,5 +1,9 @@
 var express = require("express");
 var app = express();
+var githubApi = require('node-github');
+var github = new githubApi({
+    version: "3.0.0"
+  });
 var PORT = process.env.PORT || 8000;
 
 app.use("/js", express.static("public/js"));
@@ -43,6 +47,23 @@ app.get("/blog", function(req, res){
 app.get("/github", function(req, res){
   res.sendFile(process.cwd() + "/views/github.html");
 });
+
+// Get GitHub infomation
+
+app.get('/webdev/:githubUser', function(req, res){
+  var github = new githubApi({
+    version: "3.0.0"
+  });
+  github.user.getFrom({
+      user: req.params.githubUser
+  }, function(err, gitResponse){
+      res.send(JSON.stringify(gitResponse))
+    });
+ });
+
+
+
+
 
 app.listen(PORT, function(){
   console.log("App is listening to %s", PORT);
